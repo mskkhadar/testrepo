@@ -1,0 +1,3 @@
+git@github.intuit.com:/SBG/ecosystem-docker.git
+
+cd ~/dev/ecosystem-docker ./setup.sh

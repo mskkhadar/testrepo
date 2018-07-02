@@ -1,0 +1,121 @@
+Streaming api in java 8
+data types in java
+Math api
+
+sum+=a;
+
+how to set precions across float double bigdecmial
+
+multiple conditions in for loop
+
+array sorting
+  for (int i = 1; i < arr.length; i++){
+          int j = i;
+          int B = arr[i];
+          while ((j > 0) && (arr[j-1] > B)){
+            arr[j] = arr[j-1];
+            j--;
+          }
+          arr[j] = B;
+        }
+		
+		
+		
+: error: BigInteger(long) has private access in BigInteger
+        BigInteger min=new BigInteger(arr[0]);
+
+for vs foreach arraybound excpetion 
+
+date and time vs java
+
+String opertations, compareTO String vs StringBuilder vs StringBuffer StringTokenizer
+
+read inputs in a standloan funcions reading types
+
+collections sortedset vs treeset
+
+Regex patterns
+
+static String pattern="^([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
+		"([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
+		"([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
+		"([01]?\\d\\d?|2[0-4]\\d|25[0-5])$";
+		
+
+		
+ public static void main(String[] args) {
+
+        String regex = "\\b(\\w+)(\\W+\\1\\b)+";
+        Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+
+        Scanner in = new Scanner(System.in);
+        int numSentences = Integer.parseInt(in.nextLine());
+        
+        while (numSentences-- > 0) {
+            String input = in.nextLine();
+            
+            Matcher m = p.matcher(input);
+            
+            // Check for subsequences of input that match the compiled pattern
+            while (m.find()) {
+                input = input.replaceAll(m.group(), m.group(1));
+            }
+            
+            // Prints the modified sentence.
+            System.out.println(input);
+        }
+        
+        in.close();
+    }
+	
+	
+	int count=0;
+         Pattern r = Pattern.compile("<(.+?)>([^<>]+)</\\1>");
+         Matcher m = r.matcher(line);
+         while(m.find()) {
+             if (m.group(2).length() !=0) {
+                 System.out.println(m.group(2));
+             count++;
+             }
+         }
+         if (count == 0) System.out.println("None");
+		 
+	comparator vs comparable
+
+	
+	exception handling topics revise
+	
+	instance of keyword
+	
+	to get day from giveing the date
+	public class Solution { public static String getDay(String day, String month, String year) { Calendar cal = Calendar.getInstance(); cal.set(Integer.parseInt(year), Integer.parseInt(month)-1, Integer.parseInt(day)); int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK); String Day[]={"SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"}; return(Day[dayOfWeek-1]); }
+		
+		
+	 public static String getDay(String dd ,String mm ,String yy){
+       LocalDate dt = LocalDate.of(Integer.valueOf(yy), Integer.valueOf(mm), Integer.valueOf(dd));
+        return dt.getDayOfWeek().toString();
+    }
+	
+	
+	
+	
+	NumberFormat read it
+	
+	currency converter
+	
+	 Locale indiaLocale = new Locale("en", "IN");
+
+        
+        NumberFormat us     = NumberFormat.getCurrencyInstance(Locale.US);
+        NumberFormat india  = NumberFormat.getCurrencyInstance(indiaLocale);
+        NumberFormat china  = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        
+        System.out.println("US: " + us.format(payment));
+        System.out.println("India: " + india.format(payment));
+        System.out.println("China: " + china.format(payment));
+        System.out.println("France: " + france.format(payment));
+		
+		Static import
+
+This vs super
